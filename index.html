@@ -1,467 +1,650 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Olx Clone</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-
 <body>
-    <header>
-        <div class="navber">
-            <div class="navbertop">
-                <div class="navone">
-                    <div class="logo">
-                        <img src="images/logo.jpeg" alt="">
-                    </div>
-                    <div class="head_location">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder="states">
-                        <i class="location_down fa-solid fa-angle-down"></i>
-                    </div>
-                    <div class="head_search">
-                        <input type="search" name="" id="" placeholder="Find Cars, Mobile Phones and more...">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-    
-                    <div class="lang">
-                        <p>ENGLISH</p>
-                        <i class="fa-solid fa-angle-down"></i>
-                    </div>
-                    <div class="login">
-                        <p>Login</p>
-                    </div>
-                    <div class="selbtn">
-                       <p><i class="fa-solid fa-plus"></i> SELL</p>
-                    </div>
-                </div>
+    <div class="login_email hidden" id="email">
+        <div class="email_login">
+            <div class="icons_flex">
+                <i class="fa-solid fa-arrow-left" onclick="backEmail()"></i>
+                <i class="fa-solid fa-xmark close__btn" onclick="closeEmail()"></i>
             </div>
-            <div class="navtwo">
-                <div class="all_cat">
-                    <p> ALL CATEGORIES </p>
-                    <i class="fa-solid fa-angle-down"></i>
-                </div>
-                <a href="#">furniture</a>
-                <a href="#">Study material</a>
-                <a href="#">Mobile covers</a>
-                <a href="#">premium items</a>
+            <img src="./images/emal__login.svg" alt="">
+            <h2>Enter Your Email</h2>
+            <input type="text" id="emailLogin" placeholder="Email">
+            <button class="next_button" onclick="login()">Login</button>
+            <p>We won't reveal your email to anyone else nor use it to send you spam.</p>
+        </div>
+    </div>
+    <div class="login_phone hidden" id="phone">
+        <div class="phone_login">
+            <div class="icons_flex">
+                <i class="fa-solid fa-arrow-left" onclick="backPhone()"></i>
+                <i class="fa-solid fa-xmark close__btn" onclick="closePhone()"></i>
+            </div>
+            <img src="./images/email__login.svg" alt="">
+            <h2>Enter Your phone</h2>
+            <input type="text" id="phoneLogin" placeholder="Phone Number">
+            <button disabled class="next_button" onclick="loginPhone()"> Next</button>
+            <p>We won't reveal your phone number to anyone else nor use it to send you spam.</p>
+        </div>
+    </div>
+    <div class="signUp hidden" id="signUp">
+        <div class="signUp_account">
+            <div class="icons_flex">
+                <i class="fa-solid fa-arrow-left" onclick="backSignUp()"></i>
+                <i class="fa-solid fa-xmark close__btn" onclick="closeSignUp()"></i>
+            </div>
+            <img src="./images/email__login.svg" alt="">
+            <h2>Create Your Account</h2>
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="signEmail" placeholder="Email">
+            <input type="text" id="signphone" placeholder="Phone Number">
+            <input type="text" id="gender" placeholder="Gender">
+            <button class="next_button" id="button" onclick="signUp()">Create an Account</button>
+            <p>We won't reveal your phone number to anyone else nor use it to send you spam.</p>
+        </div>
+    </div>
+    <div class="login hidden" id="login">
+        <div class="login_form">
+            <i class="fa-solid fa-xmark close__btn" onclick="closeLogin()"></i>
+            <img src="./images/logo.svg" alt="" height="100px">
+            <h1>WELCOME TO ReGenMarket</h1>
+            <h2>The trusted community of buyers and sellers.</h2>
+            <button href="" class="loginSign_button"><img src="./images/facebok.svg" alt=""> Continue with
+                Facebook</button>
+            <button href="" class="loginSign_button" onclick="createAccountPage()"><img src="./images/googleIcon.svg"
+                    alt=""> Create Your Account</button>
+            <button href="" class="loginSign_button" onclick="emailLogin()"><img src="./images/email.svg" alt="">
+                Continue With Email</button>
+            <button href="" class="loginSign_button" onclick="phoneLogin()"><img src="./images/phone.svg" alt="">
+                Continue with Phone</button>
+            <p>By continuing, you are accepting
+                <b>ReGenMarket Terms </b> of use and <b>Privacy Policy</b></p>
+        </div>
+    </div>
+    <div class="back_to_top hidden" id="top">
+        <h3> <i class="fa-solid fa-angle-up"></i>Back To Top</h3>
+    </div>
+    <div class="same__color">
+        <div class="small__navbar">
+            <div class="small__navbar_logo">
+                <svg height="20" viewBox="0 0 36.289 20.768" alt="Logo">
+                    <path
+                        d="z">
+                    </path>
+                </svg>
             </div>
         </div>
-    </header>
-
-
-    <main> 
-        <div class="container">
-       <div class="ads_section1">
-            <h2>furniture</h2>
-            <div class="post_section">
-                <div class="post_ads">
-                    <div class="img">
-                        <a href="#"><img src="images/image.jpg" alt=""></a>
-                    </div>
-                    <div class="postinfo_section">
-                        <div class="postinfo">
-                            <h3> ₹ 5,000 </h3>
-                            <h5> Brass Copper Roman Soilder Chess Wooden Board Premium </h5>
-                            <div class="loc_time">
-                                <p>SAMUDRAPUR, MAHARASHTRA</p>
-                                <p>6 DAYS AGO</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bagesection">
-                        <div class="leftbage">
-                            <i class="fa-solid fa-bolt-lightning"></i>
-                            <p>FEATURED</p>
-                        </div>
-                        <div class="rightbage">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="post_ads">
-                    <div class="img">
-                        <a href="#"><img src="images/image (1).jpg" alt=""></a>
-                    </div>
-                    <div class="postinfo_section">
-                        <div class="postinfo">
-                            <h3> ₹ 5,100</h3>
-                            <h5> Brass Copper Roman Soilder Chess Wooden Board Premium </h5>
-                            <div class="loc_time">
-                                <p>SAMUDRAPUR, MAHARASHTRA</p>
-                                <p>6 DAYS AGO</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bagesection">
-                        <div class="leftbage">
-                            <i class="fa-solid fa-bolt-lightning"></i>
-                            <p>FEATURED</p>
-                        </div>
-                        <div class="rightbage">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="post_ads">
-                    <div class="img">
-                        <a href="#"><img src="images/image (1).jpg" alt=""></a>
-                    </div>
-                    <div class="postinfo_section">
-                        <div class="postinfo">
-                            <h3> ₹ 5,100</h3>
-                            <h5> Brass Copper Roman Soilder Chess Wooden Board Premium </h5>
-                            <div class="loc_time">
-                                <p>SAMUDRAPUR, MAHARASHTRA</p>
-                                <p>6 DAYS AGO</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bagesection">
-                        <div class="leftbage">
-                            <i class="fa-solid fa-bolt-lightning"></i>
-                            <p>FEATURED</p>
-                        </div>
-                        <div class="rightbage">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="post_ads">
-                    <div class="img">
-                        <a href="#"><img src="images/image (1).jpg" alt=""></a>
-                    </div>
-                    <div class="postinfo_section">
-                        <div class="postinfo">
-                            <h3> ₹ 5,100</h3>
-                            <h5> Brass Copper Roman Soilder Chess Wooden Board Premium </h5>
-                            <div class="loc_time">
-                                <p>SAMUDRAPUR, MAHARASHTRA</p>
-                                <p>6 DAYS AGO</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bagesection">
-                        <div class="leftbage">
-                            <i class="fa-solid fa-bolt-lightning"></i>
-                            <p>FEATURED</p>
-                        </div>
-                        <div class="rightbage">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-       <div class="ads_section2">
-            <h2 margin : 10px>study material</h2>
-            <div class="post_section">
-                    <div class="post_ads">
-                        <div class="img">
-                            <a href="#"><img src="images/image.jpg" alt=""></a>
-                        </div>
-                        <div class="postinfo_section">
-                            <div class="postinfo">
-                                <h3> ₹ 5,000 </h3>
-                                <h5> Brass Copper Roman Soilder Chess Wooden Board Premium </h5>
-                                <div class="loc_time">
-                                    <p>SAMUDRAPUR, MAHARASHTRA</p>
-                                    <p>6 DAYS AGO</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bagesection">
-                            <div class="leftbage">
-                                <i class="fa-solid fa-bolt-lightning"></i>
-                                <p>FEATURED</p>
-                            </div>
-                            <div class="rightbage">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="post_ads">
-                        <div class="img">
-                            <a href="#"><img src="images/image (1).jpg" alt=""></a>
-                        </div>
-                        <div class="postinfo_section">
-                            <div class="postinfo">
-                                <h3> ₹ 5,100</h3>
-                                <h5> Brass Copper Roman Soilder Chess Wooden Board Premium </h5>
-                                <div class="loc_time">
-                                    <p>SAMUDRAPUR, MAHARASHTRA</p>
-                                    <p>6 DAYS AGO</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bagesection">
-                            <div class="leftbage">
-                                <i class="fa-solid fa-bolt-lightning"></i>
-                                <p>FEATURED</p>
-                            </div>
-                            <div class="rightbage">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="post_ads">
-                        <div class="img">
-                            <a href="#"><img src="images/image (1).jpg" alt=""></a>
-                        </div>
-                        <div class="postinfo_section">
-                            <div class="postinfo">
-                                <h3> ₹ 5,100</h3>
-                                <h5> Brass Copper Roman Soilder Chess Wooden Board Premium </h5>
-                                <div class="loc_time">
-                                    <p>SAMUDRAPUR, MAHARASHTRA</p>
-                                    <p>6 DAYS AGO</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bagesection">
-                            <div class="leftbage">
-                                <i class="fa-solid fa-bolt-lightning"></i>
-                                <p>FEATURED</p>
-                            </div>
-                            <div class="rightbage">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="post_ads">
-                        <div class="img">
-                            <a href="#"><img src="images/image (1).jpg" alt=""></a>
-                        </div>
-                        <div class="postinfo_section">
-                            <div class="postinfo">
-                                <h3> ₹ 5,100</h3>
-                                <h5> Brass Copper Roman Soilder Chess Wooden Board Premium </h5>
-                                <div class="loc_time">
-                                    <p>SAMUDRAPUR, MAHARASHTRA</p>
-                                    <p>6 DAYS AGO</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bagesection">
-                            <div class="leftbage">
-                                <i class="fa-solid fa-bolt-lightning"></i>
-                                <p>FEATURED</p>
-                            </div>
-                            <div class="rightbage">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-        
+        <div class="second__navbar">
+            <div class="second-navbar__logo">
+                <a href="./index.html">
+                    <img src="./images/logo.svg" alt=" " height="150px">
+                    <svg viewBox="0 0 36.289 20.768" alt="Logo">
+                        <path
+                            d="">
+                        </path>
+                    </svg>
+                </a>
             </div>
-       <div class="ads_section2">
-            <h2 margin : 10px>mobile covers</h2>
-            <div class="post_section">
-                        <div class="post_ads">
-                            <div class="img">
-                                <a href="#"><img src="images/image.jpg" alt=""></a>
-                            </div>
-                            <div class="postinfo_section">
-                                <div class="postinfo">
-                                    <h3> ₹ 5,000 </h3>
-                                    <h5> Brass Copper Roman Soilder Chess Wooden Board Premium </h5>
-                                    <div class="loc_time">
-                                        <p>SAMUDRAPUR, MAHARASHTRA</p>
-                                        <p>6 DAYS AGO</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bagesection">
-                                <div class="leftbage">
-                                    <i class="fa-solid fa-bolt-lightning"></i>
-                                    <p>FEATURED</p>
-                                </div>
-                                <div class="rightbage">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="post_ads">
-                            <div class="img">
-                                <a href="#"><img src="images/image (1).jpg" alt=""></a>
-                            </div>
-                            <div class="postinfo_section">
-                                <div class="postinfo">
-                                    <h3> ₹ 5,100</h3>
-                                    <h5> Brass Copper Roman Soilder Chess Wooden Board Premium </h5>
-                                    <div class="loc_time">
-                                        <p>SAMUDRAPUR, MAHARASHTRA</p>
-                                        <p>6 DAYS AGO</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bagesection">
-                                <div class="leftbage">
-                                    <i class="fa-solid fa-bolt-lightning"></i>
-                                    <p>FEATURED</p>
-                                </div>
-                                <div class="rightbage">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="post_ads">
-                            <div class="img">
-                                <a href="#"><img src="images/image (1).jpg" alt=""></a>
-                            </div>
-                            <div class="postinfo_section">
-                                <div class="postinfo">
-                                    <h3> ₹ 5,100</h3>
-                                    <h5> Brass Copper Roman Soilder Chess Wooden Board Premium </h5>
-                                    <div class="loc_time">
-                                        <p>SAMUDRAPUR, MAHARASHTRA</p>
-                                        <p>6 DAYS AGO</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bagesection">
-                                <div class="leftbage">
-                                    <i class="fa-solid fa-bolt-lightning"></i>
-                                    <p>FEATURED</p>
-                                </div>
-                                <div class="rightbage">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="post_ads">
-                            <div class="img">
-                                <a href="#"><img src="images/image (1).jpg" alt=""></a>
-                            </div>
-                            <div class="postinfo_section">
-                                <div class="postinfo">
-                                    <h3> ₹ 5,100</h3>
-                                    <h5> Brass Copper Roman Soilder Chess Wooden Board Premium </h5>
-                                    <div class="loc_time">
-                                        <p>SAMUDRAPUR, MAHARASHTRA</p>
-                                        <p>6 DAYS AGO</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bagesection">
-                                <div class="leftbage">
-                                    <i class="fa-solid fa-bolt-lightning"></i>
-                                    <p>FEATURED</p>
-                                </div>
-                                <div class="rightbage">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                            </div>
-                        </div>
-            
+            <div class="select_option">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" placeholder="Punjab,Haryana...">
             </div>
-            <div class="ads_section2">
-                <h2 margin : 10px>premium items</h2>
-                <div class="post_section">
-                        <div class="post_ads">
-                            <div class="img">
-                                <a href="#"><img src="images/image.jpg" alt=""></a>
-                            </div>
-                            <div class="postinfo_section">
-                                <div class="postinfo">
-                                    <h3> ₹ 5,000 </h3>
-                                    <h5> Brass Copper Roman Soilder Chess Wooden Board Premium </h5>
-                                    <div class="loc_time">
-                                        <p>SAMUDRAPUR, MAHARASHTRA</p>
-                                        <p>6 DAYS AGO</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bagesection">
-                                <div class="leftbage">
-                                    <i class="fa-solid fa-bolt-lightning"></i>
-                                    <p>FEATURED</p>
-                                </div>
-                                <div class="rightbage">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="post_ads">
-                            <div class="img">
-                                <a href="#"><img src="images/image (1).jpg" alt=""></a>
-                            </div>
-                            <div class="postinfo_section">
-                                <div class="postinfo">
-                                    <h3> ₹ 5,100</h3>
-                                    <h5> Brass Copper Roman Soilder Chess Wooden Board Premium </h5>
-                                    <div class="loc_time">
-                                        <p>SAMUDRAPUR, MAHARASHTRA</p>
-                                        <p>6 DAYS AGO</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bagesection">
-                                <div class="leftbage">
-                                    <i class="fa-solid fa-bolt-lightning"></i>
-                                    <p>FEATURED</p>
-                                </div>
-                                <div class="rightbage">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="post_ads">
-                            <div class="img">
-                                <a href="#"><img src="images/image (1).jpg" alt=""></a>
-                            </div>
-                            <div class="postinfo_section">
-                                <div class="postinfo">
-                                    <h3> ₹ 5,100</h3>
-                                    <h5> Brass Copper Roman Soilder Chess Wooden Board Premium </h5>
-                                    <div class="loc_time">
-                                        <p>SAMUDRAPUR, MAHARASHTRA</p>
-                                        <p>6 DAYS AGO</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bagesection">
-                                <div class="leftbage">
-                                    <i class="fa-solid fa-bolt-lightning"></i>
-                                    <p>FEATURED</p>
-                                </div>
-                                <div class="rightbage">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="post_ads">
-                            <div class="img">
-                                <a href="#"><img src="images/image (1).jpg" alt=""></a>
-                            </div>
-                            <div class="postinfo_section">
-                                <div class="postinfo">
-                                    <h3> ₹ 5,100</h3>
-                                    <h5> Brass Copper Roman Soilder Chess Wooden Board Premium </h5>
-                                    <div class="loc_time">
-                                        <p>SAMUDRAPUR, MAHARASHTRA</p>
-                                        <p>6 DAYS AGO</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bagesection">
-                                <div class="leftbage">
-                                    <i class="fa-solid fa-bolt-lightning"></i>
-                                    <p>FEATURED</p>
-                                </div>
-                                <div class="rightbage">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                            </div>
-                        </div>
-            
+            <div class="search__bar">
+                <input type="text" id="txt" placeholder="Find Electronics, Musical and more...">
+                <i class="fa-solid fa-search" onclick="search()"></i>
+            </div>
+            <div class="login__sell" id="login__sell">
+                <button href="" class="login__btn" onclick="openLogin()">Login</button>
+                <button onclick="sell()" class="sell__btn">+ Sell</button>
+            </div>
+        </div>
+    </div>
+    <div class="third__navbar">
+        <div class="select__itself">
+            <a href="">All category</a>
+        </div>
+        <div class="links" id="links">
+
+        </div>
+    </div>
+
+    <div class="fresh__recomandation">
+        <h1>Furniture</h1>
+        <div class="cards__container" id="cards">
+            <div class="card">
+                <div class="img__featured">
+                    <img src="./images/furniture/bed.jpeg" alt="">
+                    <p class="featured">featured</p>
                 </div>
-            </div> 
-        </main>
-</main>
+                <div class="card__content">
+                    <div class="card__content-gap">
+                        <div class="name__heart">
+                            <h4>King size bed </h4>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h2>Rs 12,999</h2>
+                    </div>
+                    <h5>kasoul , himachal pradesh </h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img__featured">
+                    <img src="./images/furniture/coburat white.jpeg" alt="">
+                    <p class="featured">featured</p>
+                </div>
+                <div class="card__content">
+                    <div class="card__content-gap">
+                        <div class="name__heart">
+                            <h4>Book rack</h4>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h2>Rs 7,299</h2>
+                    </div>
+                    <h5>delhi </h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img__featured">
+                    <img src="./images/furniture/coburat.jpeg" alt="">
+                    <p class="featured">featured</p>
+                </div>
+                <div class="card__content">
+                    <div class="card__content-gap">
+                        <div class="name__heart">
+                            <h4>Shoe rack</h4>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h2>Rs 16,999</h2>
+                    </div>
+                    <h5>noida </h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img__featured">
+                    <img src="./images/furniture/sofa.jpeg" alt="">
+                    <p class="featured">featured</p>
+                </div>
+                <div class="card__content">
+                    <div class="card__content-gap">
+                        <div class="name__heart">
+                            <h4>5 seater sofa set</h4>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h2>Rs 28,999</h2>
+                    </div>
+                    <h5>gurugram </h5>
+                </div>
+            </div>
+        </div>
+        <h1>Study material</h1>
+        <div class="cards__container" id="cards">
+            <div class="card">
+                <div class="img__featured">
+                    <img src="./images/study material/business.jpeg" alt="">
+                    <p class="featured">featured</p>
+                </div>
+                <div class="card__content">
+                    <div class="card__content-gap">
+                        <div class="name__heart">
+                            <h4>All ref books for commerce class 12</h4>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h2>Rs 1,500</h2>
+                    </div>
+                    <h5>patiala , punjab </h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img__featured">
+                    <img src="./images/study material/india.jpeg" alt="">
+                    <p class="featured">featured</p>
+                </div>
+                <div class="card__content">
+                    <div class="card__content-gap">
+                        <div class="name__heart">
+                            <h4>Upsc ref books set</h4>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h2>Rs 4,500</h2>
+                    </div>
+                    <h5>kurukshetra , haryana </h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img__featured">
+                    <img src="./images/study material/notes 1.jpeg" alt="">
+                    <p class="featured">featured</p>
+                </div>
+                <div class="card__content">
+                    <div class="card__content-gap">
+                        <div class="name__heart">
+                            <h4>Vmc all modules</h4>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h2>Rs 1,100</h2>
+                    </div>
+                    <h5>agra,up </h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img__featured">
+                    <img src="./images/study material/notes 2.jpeg" alt="">
+                    <p class="featured">featured</p>
+                </div>
+                <div class="card__content">
+                    <div class="card__content-gap">
+                        <div class="name__heart">
+                            <h4>Class 12 ncert bookset pcm</h4>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h2>Rs 1,000/h2>
+                    </div>
+                    <h5>Panchkula,haryana </h5>
+                </div>
+            </div>
+        </div>
+        <h1>music instuments</h1>
+        <div class="cards__container" id="cards">
+            <div class="card">
+                <div class="img__featured">
+                    <img src="./images/musical/drums.jpeg" alt="">
+                    <p class="featured">featured</p>
+                </div>
+                <div class="card__content">
+                    <div class="card__content-gap">
+                        <div class="name__heart">
+                            <h4>Acoustic drum set </h4>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h2>Rs 16,000</h2>
+                    </div>
+                    <h5>gurugram , haryana </h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img__featured">
+                    <img src="./images/musical/voilen.jpeg" alt="">
+                    <p class="featured">featured</p>
+                </div>
+                <div class="card__content">
+                    <div class="card__content-gap">
+                        <div class="name__heart">
+                            <h4>Violin</h4>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h2>Rs 11,000</h2>
+                    </div>
+                    <h5>delhi</h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img__featured">
+                    <img src="./images/musical/tabla.jpeg" alt="">
+                    <p class="featured">featured</p>
+                </div>
+                <div class="card__content">
+                    <div class="card__content-gap">
+                        <div class="name__heart">
+                            <h4>Tabla set</h4>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h2>Rs 2,000</h2>
+                    </div>
+                    <h5>mathura , U.P </h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img__featured">
+                    <img src="./images/musical/gitar.jpeg" alt="">
+                    <p class="featured">featured</p>
+                </div>
+                <div class="card__content">
+                    <div class="card__content-gap">
+                        <div class="name__heart">
+                            <h4>Yamaha f310</h4>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h2>Rs 4,500</h2>
+                    </div>
+                    <h5>lucknow , up</h5>
+                </div>
+            </div>
+        </div>
+        <h1>Electronics</h1>
+        <div class="cards__container" id="cards">
+            <div class="card">
+                <div class="img__featured">
+                    <img src="./images/electronics/home thereature.jpeg" alt="">
+                    <p class="featured">featured</p>
+                </div>
+                <div class="card__content">
+                    <div class="card__content-gap">
+                        <div class="name__heart">
+                            <h4>Sony home theatre</h4>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h2>Rs 5,000</h2>
+                    </div>
+                    <h5>Panipat,haryana </h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img__featured">
+                    <img src="./images/electronics/printing.jpeg" alt="">
+                    <p class="featured">featured</p>
+                </div>
+                <div class="card__content">
+                    <div class="card__content-gap">
+                        <div class="name__heart">
+                            <h4>Canon xerox machine</h4>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h2>Rs 35,000</h2>
+                    </div>
+                    <h5>Karnal , haryana </h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img__featured">
+                    <img src="./images/electronics/ps5.jpeg" alt="">
+                    <p class="featured">featured</p>
+                </div>
+                <div class="card__content">
+                    <div class="card__content-gap">
+                        <div class="name__heart">
+                            <h4>play station 5</h4>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h2>Rs 32,000</h2>
+                    </div>
+                    <h5>Vindhyachal , U.P </h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img__featured">
+                    <img src="./images/electronics/WhatsApp Image 2024-11-17 at 7.44.41 PM.jpeg" alt="">
+                    <p class="featured">featured</p>
+                </div>
+                <div class="card__content">
+                    <div class="card__content-gap">
+                        <div class="name__heart">
+                            <h4>Samsung 43inch tv</h4>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h2>Rs 15,000</h2>
+                    </div>
+                    <h5>himachal pradesh </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_the_olx_app_section">
+            <img src="./images/logo.svg" alt="" height="400">
+            <div class="footer_olx_content">
+                <h1>Try The ReGenMarket</h1>
+                <h3>
+                    Buy, sell and find just about anything using the app on your mobile.
+                </h3>
+            </div>
+            <div class="line"></div>
+            <div class="get__your_app_today">
+                <h4>Get Your App Today</h4>
+                <div class="apps">
+                    <img src="./images/apple.svg" alt="">
+                    <img src="./images/google.svg" alt="">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="footer__real">
+            <div class="footer__content">
+                <div class="lists">
 
+                    <ul>
+                        <h4>POPULAR category</h4>
+                        <li>Furniture</li>
+                        <li>Study material</li>
+                        <li>music instuments</li>
+                        <li>Electronics</li>
+                    </ul>
+                    
+                </div>
+                <div class="follow_us">
+                    <h4>FOLLOW US</h4>
+                    <div class="icons">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        
+                    </div>
+                    <div class="apps">
+                        <img src="./images/apple.svg" alt="">
+                        <img src="./images/google.svg" alt="">
+                        
+                    </div>
+                </div>
+            </div>
 
+            
+        </div>
+    </footer>
 </body>
+<script>
+    var categories = [
+        "Furniture",
+        "Electronics",
+        "music instuments",
+        "Study material",
+    ]
+
+    categories.map((data) => {
+        document.getElementById("links").innerHTML += `
+        <button onclick="categorySet(this)">${data}</button>
+        `
+    })
+
+    function showData() {
+        var data = JSON.parse(localStorage.getItem("users"))
+        var email = localStorage.getItem("email")
+        var isAuthenticated = localStorage.getItem("isAuthenticated")
+        for (let i = 0; i < data.length; i++) {
+            if (email == data[i].email && isAuthenticated === "true") {
+                document.getElementById("login__sell").innerHTML = `
+       <img class="avatar" onclick="profilePage()" width="60px"src="./images/avatar.png" />
+                 <button onclick="sell()" class="sell__btn">+ Sell</button>
+                `
+            }
+        }
+    }
+
+    function sell() {
+        var data = JSON.parse(localStorage.getItem("users"))
+        var email = localStorage.getItem("email")
+        var isAuthenticated = localStorage.getItem("isAuthenticated")
+        var flage = true;
+        for (let i = 0; i < data.length; i++) {
+            if (email == data[i].email && isAuthenticated === "true") {
+                flage = false
+                window.location.href = "./sell.html"
+            }
+        }
+        if (flage === true) {
+            document.getElementById("login").classList.remove("hidden")
+        }
+    }
+
+    function profilePage() {
+        window.location.href = "./profile.html"
+    }
+    showData()
+    var data = JSON.parse(localStorage.getItem("products")) || []
+    data.map((card, index) => {
+        document.getElementById("cards").innerHTML += `
+                   <div onclick="productDetail(${index})" class="card">
+                       <div class="img__featured">
+                           <img src="${card.image}" alt="">
+                           <p class="featured">featured</p>
+                       </div>
+                       <div class="card__content">
+                           <div class="card__content-gap">
+                               <div class="name__heart">
+                                   <h4>${card.name}</h4>
+                                   <i class="fa-solid fa-heart"></i>
+                               </div>
+                               <h2>Rs ${card.price}</h2>
+                           </div>
+                           <h5>${card.location}</h5>
+                       </div>
+                   </div>
+        `
+
+    })
+
+    function productDetail(index) {
+        console.log(data);
+        localStorage.setItem("productName", data[index].name)
+        localStorage.setItem("name", data[index].profileName)
+        localStorage.setItem("description", data[index].description)
+        localStorage.setItem("image", data[index].image)
+        localStorage.setItem("price", data[index].price)
+        localStorage.setItem("location", data[index].location)
+        localStorage.setItem("phone", data[index].profilePhone)
+        localStorage.setItem("phoneShow", data[index].phoneShow)
+        window.location.href = "./productDetails.html"
+    }
+
+    function openLogin() {
+        document.getElementById("login").classList.remove("hidden");
+    }
+
+    function closeLogin() {
+        document.getElementById("login").classList.add("hidden")
+    }
+
+    function emailLogin() {
+        document.getElementById("email").classList.remove("hidden");
+        document.getElementById("login").classList.add("hidden")
+    }
+
+    function closeEmail() {
+        document.getElementById("email").classList.add("hidden")
+    }
+
+    function backEmail() {
+        document.getElementById("email").classList.add("hidden")
+        document.getElementById("login").classList.remove("hidden");
+    }
+
+    function phoneLogin() {
+        document.getElementById("phone").classList.remove("hidden");
+        document.getElementById("login").classList.add("hidden")
+    }
+
+    function closePhone() {
+        document.getElementById("phone").classList.add("hidden")
+    }
+
+    function backPhone() {
+        document.getElementById("phone").classList.add("hidden")
+        document.getElementById("login").classList.remove("hidden");
+    }
+
+    function createAccountPage() {
+        document.getElementById("signUp").classList.remove("hidden");
+        document.getElementById("login").classList.add("hidden")
+    }
+
+    function closeSignUp() {
+        document.getElementById("signUp").classList.add("hidden")
+    }
+
+    function backSignUp() {
+        document.getElementById("signUp").classList.add("hidden")
+        document.getElementById("login").classList.remove("hidden");
+    }
+
+    function signUp() {
+        let data = JSON.parse(localStorage.getItem("users")) ? JSON.parse(localStorage.getItem("users")) : []
+        let flage = false
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].email === document.getElementById("signEmail").value) {
+                flage = true
+                alert("You have entered a duplicate email address")
+            }
+        }
+        if (flage === false) {
+
+            let users = []
+            let obj = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("signEmail").value,
+                gender: document.getElementById("gender").value,
+                phone: document.getElementById("signphone").value,
+                isAuthenticated: true
+            }
+            users = JSON.parse(localStorage.getItem("users")) ? JSON.parse(localStorage.getItem("users")) : []
+
+            users.push(obj)
+            localStorage.setItem("users", JSON.stringify(users))
+            document.getElementById("signUp").classList.add("hidden");
+            document.getElementById("email").classList.remove("hidden");
+        }
+    }
+
+    function login() {
+        let email = document.getElementById("emailLogin").value;
+        let users = JSON.parse(localStorage.getItem("users")) || []
+        var flage = false;
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].email === email) {
+                flage = true;
+                alert("You have successfully Login");
+                localStorage.setItem("name", users[i].name);
+                localStorage.setItem("email", email);
+                localStorage.setItem("phone", users[i].phone);
+                localStorage.setItem("gender", users[i].gender);
+                localStorage.setItem("isAuthenticated", users[i].isAuthenticated);
+                window.location.reload()
+                break;
+            }
+        }
+        if (flage === false) {
+            alert("Please enter a valid email and password");
+        }
+    }
+
+    function loginPhone() {
+        let email = document.getElementById("phoneLogin").value;
+        let users = JSON.parse(localStorage.getItem("users"))
+        var flage = false;
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].phone === phone) {
+                flage = true;
+                alert("You have successfully Login");
+                localStorage.setItem("name", users[i].name);
+                localStorage.setItem("email", email);
+                localStorage.setItem("phone", user[i].phone);
+                localStorage.setItem("isAuthenticated", user[i].isAuthenticated);
+                document.getElementById("phone").classList.add("hidden")
+                if (flage == false) {
+                    alert("Please enter a valid email and password");
+                }
+            }
+        }
+    }
+</script>
+
 </html>
